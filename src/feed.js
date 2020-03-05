@@ -1,12 +1,16 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
-// import { Container } from './styles';
+import { styles } from './styles/styles';
 
-export default function feed() {
+export default function Feed({ navigation }) {
   return (
-    <View>
-      <Text>feed</Text>
+    <View style={styles.center}>
+      <Text style={styles.title}>Navigation Drawer</Text>
+      <Button 
+        title="Go to Feed item"
+        onPress={() => navigation.navigate('Detail')}
+      />
     </View>
   );
 }

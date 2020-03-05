@@ -1,12 +1,21 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
-// import { Container } from './styles';
+import { styles } from './styles/styles';
 
-export default function detail() {
+
+export default function detail({ navigation }) {
   return (
-    <View >
-      <Text>detail</Text>
+    <View style={styles.center}>
+      <Text style={styles.title}>Detail Drawer</Text>
+      <Button 
+        title="Go to TopTab item"
+        onPress={() => navigation.navigate('TopTab')}
+      />
+      <Button 
+        title="Go to BottomTab item"
+        onPress={() => navigation.navigate('BottomTab')}
+      />
     </View>
   );
 }
